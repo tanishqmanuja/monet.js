@@ -1,0 +1,51 @@
+{
+	"version": "1.0.4",
+	"license": "MIT",
+	"source": "src/index.ts",
+	"main": "dist/index.umd.js",
+	"module": "dist/index.modern.js",
+	"types": "dist/index.d.ts",
+	"typings": "dist/index.d.ts",
+	"files": [
+		"dist",
+		"src"
+	],
+	"engines": {
+		"node": ">=14"
+	},
+	"scripts": {
+		"dev": "microbundle watch",
+		"build": "microbundle",
+		"test": "jest --config=jest.json",
+		"lint": "eslint src/**/*.ts",
+		"format": "eslint src/**/*.ts --fix"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "yarn lint"
+		}
+	},
+	"prettier": {
+		"printWidth": 80,
+		"semi": true,
+		"singleQuote": true,
+		"trailingComma": "es5"
+	},
+	"name": "monet.js",
+	"author": "tanishqmanuja",
+	"devDependencies": {
+		"@types/jest": "^27.0.3",
+		"@typescript-eslint/eslint-plugin": "^5.4.0",
+		"@typescript-eslint/parser": "^5.4.0",
+		"eslint": "^8.3.0",
+		"husky": "^7.0.4",
+		"jest": "^27.3.1",
+		"microbundle": "^0.14.2",
+		"prettier": "^2.5.0",
+		"ts-jest": "^27.0.7",
+		"typescript": "^4.5.2"
+	},
+	"dependencies": {
+		"color-calculus": "^0.2.1"
+	}
+}
